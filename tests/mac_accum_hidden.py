@@ -17,7 +17,7 @@ async def test_signed_mac_accumulation(dut):
     """
 
     # Start clock
-    cocotb.start_soon(Clock(dut.clk, 10, unit="ns").start())
+    cocotb.start_soon(Clock(dut.clk, 100, unit="ns").start())
 
     # Apply reset
     dut.rst_n.value = 0
